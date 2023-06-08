@@ -10,12 +10,12 @@ namespace Sales.Infrastructure.Repositories
     public class CategoriaRepository
     {
         public List<Categoria> GetAll()
-            { 
+        {
             return new List<Categoria>();
-            }
-        
+        }
 
 
-            
+
+
     }
 }
