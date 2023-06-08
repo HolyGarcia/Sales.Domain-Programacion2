@@ -1,21 +1,17 @@
 ﻿using Sales.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Sales.Domain.Repository;
+using Sales.Infrastructure.Core;
+
 
 namespace Sales.Infrastructure.Repositories
 {
-    public class CategoriaRepository
+    public class CategoriaRepository : BaseRepository<Categoria>, IBaseRepository<Categoria>
     {
-        public List<Categoria> GetAll()
-            { 
+        public override List<Categoria> GetEntities()
+        {
             return new List<Categoria>();
-            }
-        
-
-
-            
+        }
+       
     }
+ 
 }
