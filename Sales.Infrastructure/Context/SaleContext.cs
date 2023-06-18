@@ -19,5 +19,6 @@ namespace Sales.Infrastructure.Context
             
         }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Rol> Rol { get; set; }
     }
 }
