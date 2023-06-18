@@ -1,0 +1,10 @@
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\bin\Debug\netstandard2.1\Sales.IOC.deps.json
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\bin\Debug\netstandard2.1\Sales.IOC.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\bin\Debug\netstandard2.1\Sales.IOC.pdb
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\obj\Debug\netstandard2.1\Sales.IOC.csproj.AssemblyReference.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\obj\Debug\netstandard2.1\Sales.IOC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\obj\Debug\netstandard2.1\Sales.IOC.AssemblyInfoInputs.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\obj\Debug\netstandard2.1\Sales.IOC.AssemblyInfo.cs
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\obj\Debug\netstandard2.1\Sales.IOC.csproj.CoreCompileInputs.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\obj\Debug\netstandard2.1\Sales.IOC.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.IOC\obj\Debug\netstandard2.1\Sales.IOC.pdb

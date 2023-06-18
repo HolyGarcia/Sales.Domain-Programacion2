@@ -1,0 +1,13 @@
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\bin\Debug\netstandard2.1\Sales.Infrastructure.deps.json
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\bin\Debug\netstandard2.1\Sales.Infrastructure.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\bin\Debug\netstandard2.1\Sales.Infrastructure.pdb
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\bin\Debug\netstandard2.1\Sales.Domain.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\bin\Debug\netstandard2.1\Sales.Domain.pdb
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.csproj.AssemblyReference.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.AssemblyInfoInputs.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.AssemblyInfo.cs
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.csproj.CopyComplete
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Infrastructure\obj\Debug\netstandard2.1\Sales.Infrastructure.pdb

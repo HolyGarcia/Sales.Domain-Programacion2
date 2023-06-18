@@ -1,0 +1,10 @@
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\bin\Debug\netstandard2.1\Sales.Application.deps.json
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\bin\Debug\netstandard2.1\Sales.Application.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\bin\Debug\netstandard2.1\Sales.Application.pdb
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.csproj.AssemblyReference.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.AssemblyInfoInputs.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.AssemblyInfo.cs
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.csproj.CoreCompileInputs.cache
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.pdb

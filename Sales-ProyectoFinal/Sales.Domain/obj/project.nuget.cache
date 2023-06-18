@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cgKP1QcrRkZ2fIal7D0Qu6NUwqpLBV3Kpfw++utcwoftzwqE53IL42FbgcCaibICWw02d+AqevawPGg09u68hQ==",
+  "success": true,
+  "projectFilePath": "C:\\Sale-ProyectoFinal\\Sales-ProyectoFinal\\Sales.Domain\\Sales.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MSI GL65\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
