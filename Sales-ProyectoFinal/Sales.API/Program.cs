@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Sales.Application.Contract;
+using Sales.Application.Services;
 using Sales.Domain.Repository;
 using Sales.Infrastructure.Context;
 using Sales.Infrastructure.Interfaces;
@@ -20,12 +22,13 @@ builder.Services.AddDbContext<SaleContext>(options => options.UseSqlServer(build
 
 // Repositories //
 builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
-
 builder.Services.AddTransient<IRolRepository, RolRepository>();
 
 
 
 // Registros de app services //
+builder.Services.AddTransient<IUsuarioService, UsuarioService>();
+builder.Services.AddTransient<IRolService, RolService>();
 
 var app = builder.Build();
 

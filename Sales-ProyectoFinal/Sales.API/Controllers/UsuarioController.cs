@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Sales.Application.Contract;
+using Sales.Application.Dtos.Usuario;
+using Sales.Application.Services;
 using Sales.Domain.Entities;
 using Sales.Infrastructure.Interfaces;
 
@@ -10,56 +13,81 @@ namespace Sales.API.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
-        private readonly IUsuarioRepository usuarioRepository;
+        private readonly IUsuarioService usuarioService;
 
-        public UsuarioController(IUsuarioRepository usuarioRepository)
+        public UsuarioController(IUsuarioService usuarioService)
         {
-            this.usuarioRepository = usuarioRepository;
+            this.usuarioService = usuarioService;
         }
         // GET: api/<UsuarioController>
         [HttpGet("ObtenerUsuarios")]
         public IActionResult Get()
         {
-            var usuarios = usuarioRepository.GetUsuarios(); 
-            return Ok(usuarios);
+            var result = usuarioService.GetAll();
+            if (!result.Success)
+            {
+                BadRequest(result);
+            }
+            return Ok(result);
         }
 
         // GET api/<UsuarioController>/5
         [HttpGet("\"ObtenerUsuario\"{id}")]
         public IActionResult Get(int id)
         {
-            var usuarios = usuarioRepository.GetUsuario(id);
-            return Ok(usuarios);
+            var result = usuarioService.GetById(id);
+            if (!result.Success)
+            {
+                BadRequest(result);
+            }
+            return Ok(result);
         }
         // GET api/<UsuarioController>/5
         [HttpGet("ObtenerUsuarioByIdRol")]
         public IActionResult GetByIdRol(int idRol)
         {
-            var usuarios = usuarioRepository.GetUsuariosByIdRol(idRol);
-            return Ok(usuarios);
+            var result = usuarioService.GetByIdRol(idRol);
+            if (!result.Success)
+            {
+                BadRequest(result);
+            }
+            return Ok(result);
         }
 
         // POST api/<UsuarioController>
         [HttpPost("AgregarUsuario")]
-        public IActionResult Post([FromBody] Usuario usuario)
+        public IActionResult Post([FromBody] UsuarioAddDto usuario)
         {
-            usuarioRepository.Save(usuario);
-            return Ok();
+
+            var result = usuarioService.Save(usuario);
+            if (!result.Success)
+            {
+                BadRequest(result);
+            }
+            return Ok(result);
         }
 
         // PUT api/<UsuarioController>/5
         [HttpPut("ActualizarUsuario")]
-        public IActionResult Put([FromBody] Usuario usuario)
+        public IActionResult Put([FromBody] UsuarioUpdateDto usuario)
         {
-            usuarioRepository.Update(usuario);
-            return Ok();
+            var result = usuarioService.Update(usuario);
+            if (!result.Success)
+            {
+                BadRequest(result);
+            }
+            return Ok(result);
         }
         // DELETE api/<RolController>/5
         [HttpDelete("EliminarUsuario")]
-        public IActionResult Remove([FromBody] Usuario usuario)
+        public IActionResult Remove([FromBody] UsuarioRemoveDto usuario)
         {
-            this.usuarioRepository.Remove(usuario);
-            return Ok();
+            var result = usuarioService.Remove(usuario);
+            if (!result.Success)
+            {
+                BadRequest(result);
+            }
+            return Ok(result);
         }
 
     }

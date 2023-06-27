@@ -1779,6 +1779,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Sales.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Sales.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sales.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sales.Application.dll": {}
+        }
+      },
       "Sales.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -6109,6 +6122,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Sales.Application/1.0.0": {
+      "type": "project",
+      "path": "../Sales.Application/Sales.Application.csproj",
+      "msbuildProject": "../Sales.Application/Sales.Application.csproj"
+    },
     "Sales.Domain/1.0.0": {
       "type": "project",
       "path": "../Sales.Domain/Sales.Domain.csproj",
@@ -6122,6 +6140,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Sales.Application >= 1.0.0",
       "Sales.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -6158,6 +6177,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Sale-ProyectoFinal\\Sales-ProyectoFinal\\Sales.Application\\Sales.Application.csproj": {
+              "projectPath": "C:\\Sale-ProyectoFinal\\Sales-ProyectoFinal\\Sales.Application\\Sales.Application.csproj"
+            },
             "C:\\Sale-ProyectoFinal\\Sales-ProyectoFinal\\Sales.Infrastructure\\Sales.Infrastructure.csproj": {
               "projectPath": "C:\\Sale-ProyectoFinal\\Sales-ProyectoFinal\\Sales.Infrastructure\\Sales.Infrastructure.csproj"
             }

@@ -8,3 +8,8 @@ C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandar
 C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.csproj.CoreCompileInputs.cache
 C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.dll
 C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.pdb
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\bin\Debug\netstandard2.1\Sales.Domain.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\bin\Debug\netstandard2.1\Sales.Infrastructure.dll
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\bin\Debug\netstandard2.1\Sales.Infrastructure.pdb
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\bin\Debug\netstandard2.1\Sales.Domain.pdb
+C:\Sale-ProyectoFinal\Sales-ProyectoFinal\Sales.Application\obj\Debug\netstandard2.1\Sales.Application.csproj.CopyComplete
