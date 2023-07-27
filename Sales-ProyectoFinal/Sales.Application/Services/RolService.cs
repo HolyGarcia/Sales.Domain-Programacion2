@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Sales.Application.Contract;
 using Sales.Application.Core;
 using Sales.Application.Dtos.Rol;
+using Sales.Application.Extentions;
 using Sales.Domain.Entities;
 using Sales.Domain.Repository;
 
@@ -58,19 +59,16 @@ namespace Sales.Application.Services
             ServiceResult result = new ServiceResult();
             try
             {
-                Rol rolToRemove = new Rol();
                 var id = this.GetById(model.IdRol);
                 if (id == null)
                 {
                     result.Message = "El Id del Rol No existe en la BD";
+                    return result;
                 }
                 else 
                 {
-                    rolToRemove.IdRol = model.IdRol;
-                    rolToRemove.IdUsuarioElimino = model.IdUsuarioElimino;
-                    rolToRemove.Eliminado = model.Eliminado;
-                    rolToRemove.FechaElimino = model.FechaElimino;
-                    result.Message = "El Rol Fue Agregado Exitosamente!!";
+                    rolRepository.Remove(model.ConvertRolRemoveDtoToRolEntity());
+                    result.Message = "El Rol Fue Eliminado Exitosamente!!";
                 }
 
             }
@@ -88,26 +86,10 @@ namespace Sales.Application.Services
             ServiceResult result = new ServiceResult();
             try
             {
-                if (string.IsNullOrEmpty(model.Descripcion))
-                {
-                    result.Message = "La Descripcion del rol es requerido";
-                    result.Success = false;
+                if(!model.IsValidRol().Success)
                     return result;
-                }
-                if (model.Descripcion.Length > 30 ) 
-                {
-                    result.Message = "La longitud de la Descripcion No puede ser mayor a 30";
-                    result.Success = false;
-                    return result;
-                }
 
-                rolRepository.Save(new Domain.Entities.Rol 
-                {
-                    FechaRegistro = model.FechaRegistro,
-                    EsActivo = model.EsActivo,
-                    Descripcion = model.Descripcion,
-                    IdUsuarioCreacion = model.IdUsuarioCreacion
-                });
+                rolRepository.Save(model.ConvertRolAddDtoToRolEntity());
                 result.Message = "El Rol Fue Agregado Exitosamente!!";
             }
             catch (System.Exception ex)
@@ -124,21 +106,18 @@ namespace Sales.Application.Services
             ServiceResult result = new ServiceResult();
             try
             {
-                Rol rolToUpdate = new Rol();
+                if (!model.IsValidRol().Success)
+                    return result;
+
                 var id = this.GetById(model.IdRol);
                 if (id == null)
                 {
                     result.Message = "El Id del Rol No existe en la BD";
+                    return result;
                 }
                 else
                 {
-                    rolToUpdate.IdRol = model.IdRol;
-                    rolToUpdate.FechaRegistro = model.FechaRegistro;
-                    rolToUpdate.EsActivo = model.EsActivo;
-                    rolToUpdate.Descripcion = model.Descripcion;
-                    rolToUpdate.FechaMod = model.FechaMod;
-                    rolToUpdate.IdUsuarioMod = model.IdUsuarioMod;
-                    rolToUpdate.IdUsuarioCreacion = model.IdUsuarioCreacion;
+                    rolRepository.Update(model.ConvertRolUpdateDtoToRolEntity());
                     result.Message = "El Rol Fue Actualizado Exitosamente!!";
                 }
 

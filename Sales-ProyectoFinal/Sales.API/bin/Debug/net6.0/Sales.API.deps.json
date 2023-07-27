@@ -982,6 +982,7 @@
       },
       "Sales.Application/1.0.0": {
         "dependencies": {
+          "Sales.Domain": "1.0.0",
           "Sales.Infrastructure": "1.0.0"
         },
         "runtime": {

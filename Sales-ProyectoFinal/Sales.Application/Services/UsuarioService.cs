@@ -2,6 +2,7 @@
 using Sales.Application.Contract;
 using Sales.Application.Core;
 using Sales.Application.Dtos.Usuario;
+using Sales.Application.Extentions;
 using Sales.Domain.Entities;
 using Sales.Infrastructure.Interfaces;
 using System;
@@ -75,7 +76,6 @@ namespace Sales.Application.Services
             ServiceResult result = new ServiceResult();
             try
             {
-                Usuario usuarioToRemove = new Usuario();
                 var id = this.GetById(model.Id);
                 if (id == null)
                 {
@@ -83,11 +83,7 @@ namespace Sales.Application.Services
                 }
                 else
                 {
-                    usuarioToRemove.Id = model.Id;
-                    usuarioToRemove.Eliminado = model.Eliminado;
-                    usuarioToRemove.IdUsuarioElimino = model.IdUsuarioElimino;
-                    usuarioToRemove.FechaElimino = model.FechaElimino;
-                    usuarioRepository.Remove(usuarioToRemove);
+                    usuarioRepository.Remove(model.ConvertUsuarioRemoveDtoToUsuarioEntity());
                     result.Message = "El Usuario Fue Eliminado Exitosamente!!";
                 }
             }
@@ -105,44 +101,9 @@ namespace Sales.Application.Services
             ServiceResult result = new ServiceResult();
             try
             {
-                if (string.IsNullOrEmpty(model.Nombre))
-                {
-                    result.Message = "El Nombre del usuario es requerido";
-                    result.Success = false;
+                if (!model.IsValidUsuario().Success)
                     return result;
-                }
-                if (string.IsNullOrEmpty(model.Correo))
-                {
-                    result.Message = "El Correo del usuario es requerido";
-                    result.Success = false;
-                    return result;
-                }
-
-                if (string.IsNullOrEmpty(model.Clave))
-                {
-                    result.Message = "La Clave del usuario es requerido";
-                    result.Success = false;
-                    return result;
-                }
-                if (string.IsNullOrEmpty(model.Telefono))
-                {
-                    result.Message = "El Telefono del usuario es requerido";
-                    result.Success = false;
-                    return result;
-                }
-                usuarioRepository.Save(new Domain.Entities.Usuario
-                {
-                    FechaRegistro = model.FechaRegistro,
-                    NombreFoto = model.NombreFoto,
-                    Clave = model.Clave,
-                    Correo = model.Correo,
-                    IdUsuarioCreacion = model.IdUsuarioCreacion,
-                    EsActivo = model.EsActivo,
-                    IdRol = model.IdRol,
-                    Nombre = model.Nombre,
-                    Telefono = model.Telefono,
-                    UrlFoto = model.UrlFoto
-                });
+                usuarioRepository.Save(model.ConvertUsuarioAddDtoToUsuarioEntity());
                 result.Message = "El Usuario Fue Agregado Exitosamente!!";
             }
             catch (Exception ex)
@@ -159,7 +120,9 @@ namespace Sales.Application.Services
             ServiceResult result = new ServiceResult();
             try
             {
-                Usuario usuarioToUpdate = new Usuario();
+                if (!model.IsValidUsuario().Success)
+                    return result;
+
                 var id = this.GetById(model.Id);
                 if (id == null)
                 {
@@ -167,20 +130,7 @@ namespace Sales.Application.Services
                 }
                 else
                 {
-                    usuarioToUpdate.Id = model.Id;
-                    usuarioToUpdate.Nombre = model.Nombre;
-                    usuarioToUpdate.Telefono = model.Telefono;
-                    usuarioToUpdate.IdRol = model.IdRol;
-                    usuarioToUpdate.UrlFoto = model.UrlFoto;
-                    usuarioToUpdate.FechaRegistro = model.FechaRegistro;
-                    usuarioToUpdate.NombreFoto = model.NombreFoto;
-                    usuarioToUpdate.Clave = model.Clave;
-                    usuarioToUpdate.Correo = model.Correo;
-                    usuarioToUpdate.FechaMod = model.FechaMod;
-                    usuarioToUpdate.IdUsuarioMod = model.IdUsuarioMod;
-                    usuarioToUpdate.IdUsuarioCreacion = model.IdUsuarioCreacion;
-                    usuarioToUpdate.EsActivo = model.EsActivo;
-                    usuarioRepository.Update(usuarioToUpdate);
+                    usuarioRepository.Update(model.ConvertUsuarioUpdateDtoToUsuarioEntity());
                     result.Message = "El Usuario Fue Actualizado Exitosamente!!";
                 }
             }

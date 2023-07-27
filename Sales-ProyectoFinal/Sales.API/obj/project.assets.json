@@ -1783,6 +1783,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "Sales.Domain": "1.0.0",
           "Sales.Infrastructure": "1.0.0"
         },
         "compile": {
